@@ -1,0 +1,291 @@
+{
+ "systems": {
+  "co": {
+   "vasp_run": "co_molecule",
+   "incar": "SYSTEM = co_molecule static\nPREC = Accurate ; ENCUT = 500 ; LREAL = .FALSE.\nISMEAR = 0 ; SIGMA = 0.01 ; EDIFF = 1E-7\nISYM = 0 ; NSW = 0 ; NBANDS = 32\nLWAVE = .TRUE. ; LCHARG = .FALSE.\n",
+   "kpoints": "Gamma\n0\nGamma\n1 1 1\n0 0 0\n",
+   "potcar": [
+    "PAW_PBE C 08Apr2002",
+    "PAW_PBE O 08Apr2002"
+   ],
+   "config": "docs/examples/gallery/co.yaml",
+   "input_sha256": {
+    "wavecar": "c6bb810b1089e06d5ad4db65d669f62e00f86bc64a784398191d5cdb7f79cf54",
+    "structure": "1061b859a28ae40e19f73edc268b1a7e33d6f30659581f0a4755fdb12ce78757",
+    "potcar": "266f4c7c28ad1594b10a3f103db2dec69fa5d69276d333783fe45d26497d45b4",
+    "metadata": "f8d1f285d9f5f41d5e84b5cc38f977cd27b3227e5fed9bcc044246252fd9ff88"
+   },
+   "diagnostics": {
+    "band_window": 8,
+    "band_window_note": "auto -> norb: lowest 8 bands well conditioned at every k-point (min eigenvalue 8.96e-03); identical to LOBSTER's window",
+    "abs_charge_spilling": 0.018359737176432512,
+    "abs_total_spilling": 0.14151249600534316,
+    "max_paw_norm_deviation": 3.733738229705352e-08,
+    "min_overlap_eigenvalue": 0.215950218880046,
+    "electrons_dft": 10.0
+   },
+   "bonds": [
+    {
+     "label": "C1-O2[0 0 0]",
+     "distance_A": 1.143412183127566,
+     "icohp_eV": -20.357503787318613,
+     "icoop": 0.568805989342229,
+     "icobi": 2.5165184440134922,
+     "icohp_sigma_eV": -12.639977378229634,
+     "icohp_pi_eV": -7.717526409088983
+    }
+   ],
+   "lowdin_charges": {
+    "C1": 0.18930429052581843,
+    "O2": -0.18930429052581665
+   },
+   "orbitals": {
+    "method": "VASP pseudo-wavefunction at Gamma, FFT on a 128^3 grid; real gauge; degenerate sets rotated onto Cartesian axes; PyTessel marching cubes; QASR illustrated style",
+    "isovalue_A^-3/2": 0.08,
+    "levels": [
+     {
+      "label": "3σ",
+      "bands": [
+       1
+      ],
+      "note": "",
+      "energy_ev": -20.28083789799414,
+      "weight_within_2p5_A": 1.0,
+      "occupied": true,
+      "image": "mo/co-01.png"
+     },
+     {
+      "label": "4σ",
+      "bands": [
+       2
+      ],
+      "note": "",
+      "energy_ev": -5.070356999839403,
+      "weight_within_2p5_A": 0.998,
+      "occupied": true,
+      "image": "mo/co-02.png"
+     },
+     {
+      "label": "1π",
+      "bands": [
+       3,
+       4
+      ],
+      "note": "",
+      "energy_ev": -2.769403173143015,
+      "weight_within_2p5_A": 0.998,
+      "occupied": true,
+      "image": "mo/co-03.png"
+     },
+     {
+      "label": "5σ",
+      "bands": [
+       5
+      ],
+      "note": "HOMO",
+      "energy_ev": -0.07349522667154851,
+      "weight_within_2p5_A": 0.985,
+      "occupied": true,
+      "image": "mo/co-05.png"
+     },
+     {
+      "label": "2π*",
+      "bands": [
+       6,
+       7
+      ],
+      "note": "LUMO",
+      "energy_ev": 6.813047404457245,
+      "weight_within_2p5_A": 0.951,
+      "occupied": false,
+      "image": "mo/co-06.png"
+     }
+    ]
+   }
+  },
+  "ch4": {
+   "vasp_run": "ch4_molecule",
+   "incar": "SYSTEM = ch4_molecule static\nPREC = Accurate ; ENCUT = 500 ; LREAL = .FALSE.\nISMEAR = 0 ; SIGMA = 0.01 ; EDIFF = 1E-7\nISYM = 0 ; NSW = 0 ; NBANDS = 32\nLWAVE = .TRUE. ; LCHARG = .FALSE.\n",
+   "kpoints": "Gamma\n0\nGamma\n1 1 1\n0 0 0\n",
+   "potcar": [
+    "PAW_PBE C 08Apr2002",
+    "PAW_PBE H 15Jun2001"
+   ],
+   "config": "docs/examples/gallery/ch4.yaml",
+   "input_sha256": {
+    "wavecar": "029507f6a682435d8ef6a781d3d5b7847459cb355ea2c88db077800711bf5178",
+    "structure": "ab4cecd0cb9e5fa2f13e0032e3c48a53ca039236f86591e7e82953b1b6131261",
+    "potcar": "fd1b329d76d8f21fa791adce740aa6878c608a22716f304d584b48f89bdca95e",
+    "metadata": "43481ac8bc5b69d71a0cf58cfb22bdc37dcf082d1fe97925b382ba4f50196002"
+   },
+   "diagnostics": {
+    "band_window": 8,
+    "band_window_note": "auto -> repaired: lowest 8 bands at 0 of 1 (spin, k); minimal repair at 1 with up to 1 extra band(s) (highest candidate +10.01 eV vs E_F; min eigenvalue 2.42e-02)",
+    "abs_charge_spilling": 0.014306284322835483,
+    "abs_total_spilling": 0.4595624111082893,
+    "max_paw_norm_deviation": 1.66959844838388e-08,
+    "min_overlap_eigenvalue": 0.20659848917828216,
+    "electrons_dft": 8.0
+   },
+   "bonds": [
+    {
+     "label": "C1-H2[0 0 0]",
+     "distance_A": 1.0960317881430532,
+     "icohp_eV": -5.641297000377534,
+     "icoop": 0.37817378574734606,
+     "icobi": 0.9528101840252126,
+     "icohp_sigma_eV": -5.641297000550846,
+     "icohp_pi_eV": 0.0
+    },
+    {
+     "label": "C1-H3[0 0 0]",
+     "distance_A": 1.0960317656205258,
+     "icohp_eV": -5.641269484061342,
+     "icoop": 0.3781714573887688,
+     "icobi": 0.9528078535384716,
+     "icohp_sigma_eV": -5.641269484115356,
+     "icohp_pi_eV": 0.0
+    },
+    {
+     "label": "C1-H4[0 0 0]",
+     "distance_A": 1.0960317647818802,
+     "icohp_eV": -5.641369764994224,
+     "icoop": 0.37817638314767954,
+     "icobi": 0.9528127273681499,
+     "icohp_sigma_eV": -5.64136976516087,
+     "icohp_pi_eV": 0.0
+    },
+    {
+     "label": "C1-H5[0 0 0]",
+     "distance_A": 1.096031737739301,
+     "icohp_eV": -5.64137103943124,
+     "icoop": 0.3781768039029836,
+     "icobi": 0.9528132397162837,
+     "icohp_sigma_eV": -5.641371039583026,
+     "icohp_pi_eV": 0.0
+    }
+   ],
+   "lowdin_charges": {
+    "C1": -0.8340849198657425,
+    "H2": 0.2085226469949275,
+    "H3": 0.20852739900828077,
+    "H4": 0.20851797517505677,
+    "H5": 0.20851689868748302
+   },
+   "orbitals": {
+    "method": "VASP pseudo-wavefunction at Gamma, FFT on a 128^3 grid; real gauge; degenerate sets rotated onto Cartesian axes; PyTessel marching cubes; QASR illustrated style",
+    "isovalue_A^-3/2": 0.08,
+    "levels": [
+     {
+      "label": "2a₁",
+      "bands": [
+       1
+      ],
+      "note": "",
+      "energy_ev": -7.6647310490583145,
+      "weight_within_2p5_A": 0.998,
+      "occupied": true,
+      "image": "mo/ch4-01.png"
+     },
+     {
+      "label": "1t₂",
+      "bands": [
+       2,
+       3,
+       4
+      ],
+      "note": "HOMO",
+      "energy_ev": -0.07032248269203656,
+      "weight_within_2p5_A": 0.991,
+      "occupied": true,
+      "image": "mo/ch4-02.png"
+     }
+    ]
+   }
+  },
+  "diamond": {
+   "vasp_run": "c_diamond_k7",
+   "incar": "SYSTEM = C diamond, full 7x7x7 mesh for COHP\nPREC = Accurate\nENCUT = 500\nLREAL = .FALSE.\nEDIFF = 1E-8\nISMEAR = -5\nNBANDS = 16\nISYM = -1\nNSW = 0\nLWAVE = .TRUE.\nLCHARG = .FALSE.\nLORBIT = 11\nNEDOS = 2001\n",
+   "kpoints": "Gamma-centred 7x7x7\n0\nGamma\n7 7 7\n0 0 0\n",
+   "potcar": [
+    "PAW_PBE C 08Apr2002"
+   ],
+   "config": "docs/examples/gallery/diamond.yaml",
+   "input_sha256": {
+    "wavecar": "5e57d73bf5fc5ac1f78c9bb34c085656165086084c10a31382716eb2332c3f6e",
+    "structure": "c2fa324b5197d6cb9d2c0330da81b73b1707c3f9ba43cb1577144f9d79848de3",
+    "potcar": "e324f39f282d3fd6b99a7bff390f4b2441edd3dd3eac607d1f1c01376f3d0dc0",
+    "metadata": "1b11164a2801281077f3d6ff4f9d13c28773cb24b81f891da1d2082bfd1b1a8c"
+   },
+   "diagnostics": {
+    "band_window": 8,
+    "band_window_note": "auto -> norb: lowest 8 bands well conditioned at every k-point (min eigenvalue 5.22e-01); identical to LOBSTER's window",
+    "abs_charge_spilling": 0.009792941707960518,
+    "abs_total_spilling": 0.09043102837095883,
+    "max_paw_norm_deviation": 1.2423056405808097e-07,
+    "min_overlap_eigenvalue": 0.1690569394489523,
+    "electrons_dft": 8.000000000000007
+   },
+   "bonds": [
+    {
+     "label": "C1-C2[-1 0 0]",
+     "distance_A": 1.5445563076495463,
+     "icohp_eV": -9.625639243656686,
+     "icoop": 0.4091816533171943,
+     "icobi": 0.9503471628735553,
+     "icohp_sigma_eV": -9.05834201275202,
+     "icohp_pi_eV": -0.5672972309046762
+    },
+    {
+     "label": "C1-C2[0 -1 0]",
+     "distance_A": 1.5445563076495463,
+     "icohp_eV": -9.625639228681894,
+     "icoop": 0.4091816530797203,
+     "icobi": 0.9503471625533255,
+     "icohp_sigma_eV": -9.058342001398838,
+     "icohp_pi_eV": -0.5672972272830624
+    },
+    {
+     "label": "C1-C2[0 0 -1]",
+     "distance_A": 1.5445563076495463,
+     "icohp_eV": -9.625639238542762,
+     "icoop": 0.40918165313681576,
+     "icobi": 0.9503471628304392,
+     "icohp_sigma_eV": -9.05834201086962,
+     "icohp_pi_eV": -0.5672972276731526
+    },
+    {
+     "label": "C1-C2[0 0 0]",
+     "distance_A": 1.5445563076495463,
+     "icohp_eV": -9.625639220661883,
+     "icoop": 0.4091816535740919,
+     "icobi": 0.9503471598950621,
+     "icohp_sigma_eV": -9.058342003665807,
+     "icohp_pi_eV": -0.5672972169960869
+    }
+   ],
+   "lowdin_charges": {
+    "C1": 7.946256985746913e-10,
+    "C2": -7.946301394667898e-10
+   }
+  }
+ },
+ "generated": "2026-11-10",
+ "software": {
+  "prowl": "0.1.0",
+  "prowl_commit": "d764f9b",
+  "qasr": "qasr 0.7.0",
+  "pytessel": "1.3.0",
+  "matplotlib": "3.11.2"
+ },
+ "figures": [
+  "co-light.svg",
+  "ch4-light.svg",
+  "diamond-light.svg",
+  "bonds-light.svg",
+  "co-dark.svg",
+  "ch4-dark.svg",
+  "diamond-dark.svg",
+  "bonds-dark.svg"
+ ]
+}

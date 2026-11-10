@@ -108,7 +108,7 @@ if(PROWL_BUILD_TESTS)
     tests/unit/test_analysis.cpp
     tests/unit/test_potcar.cpp
     tests/unit/test_paw_toy.cpp)
-  target_link_libraries(prowl_unit_tests PRIVATE prowl_core Catch2::Catch2WithMain prowl_warnings)
+  target_link_libraries(prowl_unit_tests PRIVATE prowl_core Catch2::Catch2WithMain OpenMP::OpenMP_CXX prowl_warnings)
   include(Catch)
   catch_discover_tests(prowl_unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 endif()

@@ -6,7 +6,9 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .venv/
+.venv-docs/
 venv/
+/docs/_build/
 
 # Never commit licensed or private calculation data
 POTCAR*

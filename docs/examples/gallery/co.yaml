@@ -1,0 +1,29 @@
+# Configuration used for the co example in the documentation gallery.
+schema_version: 1
+profile: prowl
+
+basis:
+  source: koga_hf_sto
+  selection: zval_valence
+  polarization: none
+
+analysis:
+  bond_selection:
+    mode: distance_cutoff
+    min_distance_angstrom: 0.0
+    max_distance_angstrom: 1.5
+  energy:
+    reference: fermi
+    min_ev: -25
+    max_ev: 10
+    points: 3501
+    broadening:
+      type: gaussian
+      sigma_ev: 0.3
+  window_sensitivity: true
+  orbital_frame: bond
+
+numerical:
+  backend: cpu
+  band_window: auto
+  strict_validation: true

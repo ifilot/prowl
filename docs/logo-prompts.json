@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "selected_concept": "Angular owl with teal diamond eyes (confirmed by the user's reference)",
+  "assets": [
+    {
+      "variant": "symbol",
+      "file": "_static/brand/prowl-owl-symbol.png",
+      "prompt": "Use case: logo-brand\nAsset type: standalone symbol for PROWL scientific software documentation.\nPrimary request: A minimal angular owl-head emblem cut from a single bold charcoal silhouette, two pointed upper corners and a tapered lower edge. Two opposing deep teal diamond-like orbital eye shapes are separated by a crisp V of negative space, suggesting orbital lobes and a focused owl. Geometric, serious, compact scientific identity. No feathers, no body, no cartoon.\nContext: PROWL projects VASP wavefunctions onto local atomic orbitals to analyze chemical bonding; intended for scientists.\nStyle: premium minimalist flat vector-like logo exploration, precise edges, strong memorable silhouette, balanced negative space; must be feasible to redraw as an SVG later.\nPalette: muted deep teal #167D8D and charcoal #24323D only. No gradients, shadows, textures, glow, 3D, mockups, embellishments or watermark.\nComposition: one centered symbol on a pure white square canvas, generous whitespace, symbol occupies about half the canvas width. No framing box.\nText: absolutely no text, no words, no numerals; for the P monogram only, the P IS the symbol.\nProduce exactly one logo."
+    },
+    {
+      "variant": "wordmark",
+      "file": "_static/brand/prowl-owl-wordmark.png",
+      "prompt": "Use case: logo-brand\nAsset type: horizontal symbol-and-wordmark logo for PROWL scientific software documentation.\nInput image 1 is the existing Faceted owl symbol, the edit target. Preserve this symbol's exact defining geometry, silhouette, internal negative spaces and teal/charcoal colors. Do not redesign it.\nPrimary request: create the matching horizontal logo with the same symbol to the left and the word PROWL to its right. Rescale the existing symbol uniformly for balance and reposition only as needed. Add refined uppercase geometric sans-serif lettering with a medium-to-semibold weight, meticulous kerning, charcoal #24323D, no decorative cuts. The symbol should be visually about 1.2 times the capital letter height. Clear breathing room between symbol and type. Polished restrained scientific software identity.\nText (verbatim): \"PROWL\" \u2014 exactly P R O W L, one word, uppercase. No slogan, captions, labels, numbers or any additional text.\nCanvas: wide horizontal aspect ratio on a pure white background, one centered logo lockup with generous margins, readable clean wordmark. Flat vector-like appearance. No shadows, gradients, textures, mockups, watermark or background ornament.\nKeep the symbol consistent with input image 1. Produce exactly one horizontal logo."
+    }
+  ]
+}
