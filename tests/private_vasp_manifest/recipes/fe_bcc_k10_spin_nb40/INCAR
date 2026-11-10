@@ -1,0 +1,14 @@
+SYSTEM = bcc Fe ferromagnetic, full mesh (spin-polarised metal fixture), NBANDS 40 for polarization functions
+PREC = Accurate
+ENCUT = 400
+LREAL = .FALSE.
+ISPIN = 2
+MAGMOM = 3.0
+EDIFF = 1E-8
+ISMEAR = 0 ; SIGMA = 0.1
+NBANDS = 40
+ISYM = -1
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.
+LORBIT = 11

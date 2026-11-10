@@ -1,0 +1,13 @@
+SYSTEM = Si8 Gamma-only matched pair (gam binary)
+PREC = Accurate
+ENCUT = 300
+LREAL = .FALSE.
+ALGO = Exact
+NELM = 60
+EDIFF = 1E-9
+ISMEAR = 0 ; SIGMA = 0.05
+NBANDS = 64
+ISYM = 0
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.

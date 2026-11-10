@@ -1,0 +1,371 @@
+{
+ "_comment": "PROWL regression for the pbeVaspFit2026 basis (docs/BASIS_FIT_PLAN.md, M7). Values: PROWL 'prowl' profile, frozen M3 method (tools/basisfit `library full --all` selects the same shells), shells per species as listed, bonds = all pairs up to max_distance grouped by element pair and distance (ICOHP in eV, spin-summed, mean over equivalent bonds). Runs: recipes/<run> generated with tools/run_vasp_fixture.py. Reference date 2026-11-05 (M3 final evaluation); TiO2 and CeO2 updated 2026-11-06 (coefficient cap, lanthanide 5d from _3: user decisions).",
+ "profile": "prowl",
+ "tolerance": {
+  "spilling_pp": 0.02,
+  "icohp_rel": 0.005,
+  "icohp_abs": 0.002
+ },
+ "solids": {
+  "al_fcc": {
+   "run": "al_fcc",
+   "potcars": [
+    "Al"
+   ],
+   "selection": {
+    "Al": [
+     "3s",
+     "3p"
+    ]
+   },
+   "max_distance": 3.092885,
+   "spilling_pct": 2.67461,
+   "bonds": {
+    "Al-Al@2.864": -1.41856
+   }
+  },
+  "cu_fcc": {
+   "run": "cu_fcc",
+   "potcars": [
+    "Cu"
+   ],
+   "selection": {
+    "Cu": [
+     "4s",
+     "4p",
+     "3d"
+    ]
+   },
+   "max_distance": 2.760686,
+   "spilling_pct": 1.25405,
+   "bonds": {
+    "Cu-Cu@2.556": -1.53409
+   }
+  },
+  "w_bcc": {
+   "run": "w_bcc",
+   "potcars": [
+    "W"
+   ],
+   "selection": {
+    "W": [
+     "6s",
+     "6p",
+     "5d"
+    ]
+   },
+   "max_distance": 2.960248,
+   "spilling_pct": 1.52631,
+   "bonds": {
+    "W-W@2.741": -3.31011
+   }
+  },
+  "fe_bcc": {
+   "run": "fe_bcc_k10_spin_nb40",
+   "potcars": [
+    "Fe"
+   ],
+   "selection": {
+    "Fe": [
+     "4s",
+     "4p",
+     "3d"
+    ]
+   },
+   "max_distance": 2.64692,
+   "spilling_pct": 1.52704,
+   "bonds": {
+    "Fe-Fe@2.451": -2.03074
+   }
+  },
+  "mgo": {
+   "run": "mgo_k6_nb40",
+   "potcars": [
+    "Mg",
+    "O"
+   ],
+   "selection": {
+    "Mg": [
+     "3s",
+     "3p"
+    ],
+    "O": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.2734,
+   "spilling_pct": 0.83232,
+   "bonds": {
+    "Mg-O@2.105": -2.49378
+   }
+  },
+  "nacl": {
+   "run": "nacl",
+   "potcars": [
+    "Na",
+    "Cl"
+   ],
+   "selection": {
+    "Na": [
+     "3s",
+     "3p"
+    ],
+    "Cl": [
+     "3s",
+     "3p"
+    ]
+   },
+   "max_distance": 3.0456,
+   "spilling_pct": 0.47331,
+   "bonds": {
+    "Cl-Na@2.820": -1.46914
+   }
+  },
+  "lif": {
+   "run": "lif",
+   "potcars": [
+    "Li",
+    "F"
+   ],
+   "selection": {
+    "Li": [
+     "2s",
+     "2p"
+    ],
+    "F": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.1762,
+   "spilling_pct": 0.41462,
+   "bonds": {
+    "F-Li@2.015": -1.92896
+   }
+  },
+  "bao": {
+   "run": "bao",
+   "potcars": [
+    "Ba_sv",
+    "O"
+   ],
+   "selection": {
+    "Ba": [
+     "5s",
+     "6s",
+     "5p"
+    ],
+    "O": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.9808,
+   "spilling_pct": 2.52672,
+   "bonds": {
+    "Ba-O@2.760": -0.48166
+   }
+  },
+  "diamond": {
+   "run": "c_diamond_k7",
+   "potcars": [
+    "C"
+   ],
+   "selection": {
+    "C": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 1.668121,
+   "spilling_pct": 0.97929,
+   "bonds": {
+    "C-C@1.545": -9.62564
+   }
+  },
+  "si": {
+   "run": "si_diamond_k6",
+   "potcars": [
+    "Si"
+   ],
+   "selection": {
+    "Si": [
+     "3s",
+     "3p"
+    ]
+   },
+   "max_distance": 2.53936,
+   "spilling_pct": 1.44864,
+   "bonds": {
+    "Si-Si@2.351": -4.58091
+   }
+  },
+  "gaas": {
+   "run": "gaas_k6",
+   "potcars": [
+    "Ga_d",
+    "As"
+   ],
+   "selection": {
+    "Ga": [
+     "4s",
+     "4p",
+     "3d"
+    ],
+    "As": [
+     "4s",
+     "4p"
+    ]
+   },
+   "max_distance": 2.642244,
+   "spilling_pct": 0.99445,
+   "bonds": {
+    "As-Ga@2.447": -4.55365
+   }
+  },
+  "fes2": {
+   "run": "fes2_pyrite_k4",
+   "potcars": [
+    "Fe",
+    "S"
+   ],
+   "selection": {
+    "Fe": [
+     "4s",
+     "4p",
+     "3d"
+    ],
+    "S": [
+     "3s",
+     "3p"
+    ]
+   },
+   "max_distance": 2.446462,
+   "spilling_pct": 1.72056,
+   "bonds": {
+    "Fe-S@2.265": -4.63376,
+    "S-S@2.159": -3.97787
+   }
+  },
+  "tio2_rutile": {
+   "run": "tio2_rutile",
+   "potcars": [
+    "Ti",
+    "O"
+   ],
+   "selection": {
+    "Ti": [
+     "4s",
+     "4p",
+     "3d"
+    ],
+    "O": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.103629,
+   "spilling_pct": 0.87187,
+   "bonds": {
+    "O-Ti@1.948": -5.78536,
+    "O-Ti@1.982": -5.49682
+   }
+  },
+  "pdo": {
+   "run": "pdo",
+   "potcars": [
+    "Pd",
+    "O"
+   ],
+   "selection": {
+    "Pd": [
+     "5s",
+     "5p",
+     "4d"
+    ],
+    "O": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.185549,
+   "spilling_pct": 0.58178,
+   "bonds": {
+    "O-Pd@2.024": -3.64295
+   }
+  },
+  "ceo2": {
+   "run": "ceo2",
+   "potcars": [
+    "Ce",
+    "O"
+   ],
+   "selection": {
+    "Ce": [
+     "5s",
+     "6s",
+     "5p",
+     "5d",
+     "4f"
+    ],
+    "O": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.530474,
+   "spilling_pct": 0.89362,
+   "bonds": {
+    "Ce-O@2.343": -3.76588
+   }
+  },
+  "uo2": {
+   "run": "uo2",
+   "potcars": [
+    "U",
+    "O"
+   ],
+   "selection": {
+    "U": [
+     "6s",
+     "7s",
+     "6p",
+     "6d",
+     "5f"
+    ],
+    "O": [
+     "2s",
+     "2p"
+    ]
+   },
+   "max_distance": 2.558066,
+   "spilling_pct": 0.88939,
+   "bonds": {
+    "O-U@2.369": -4.24008
+   }
+  },
+  "pbte": {
+   "run": "pbte",
+   "potcars": [
+    "Pb",
+    "Te"
+   ],
+   "selection": {
+    "Pb": [
+     "6s",
+     "6p"
+    ],
+    "Te": [
+     "5s",
+     "5p"
+    ]
+   },
+   "max_distance": 3.4884,
+   "spilling_pct": 2.26823,
+   "bonds": {
+    "Pb-Te@3.230": -1.49472
+   }
+  }
+ }
+}

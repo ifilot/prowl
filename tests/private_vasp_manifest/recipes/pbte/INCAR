@@ -1,0 +1,8 @@
+SYSTEM = pbte (pbefit benchmark solid)
+PREC = Accurate; ENCUT = 400; LREAL = .FALSE.
+ISYM = 0
+ISMEAR = 0; SIGMA = 0.05
+EDIFF = 1E-7; NELM = 200
+NBANDS = 20
+NSW = 0
+LWAVE = .TRUE.; LCHARG = .FALSE.

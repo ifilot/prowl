@@ -1,0 +1,6 @@
+COHPstartEnergy  -15
+COHPendEnergy     10
+basisSet Koga
+basisfunctions Fe 4s 3d
+gaussianSmearingWidth 0.1
+cohpGenerator from 2.3 to 2.5

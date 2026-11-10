@@ -1,0 +1,108 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "cpu-debug",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "PROWL_ENABLE_CUDA": "OFF"
+      }
+    },
+    {
+      "name": "cpu-release",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "PROWL_ENABLE_CUDA": "OFF",
+        "PROWL_NATIVE_ARCH": "ON"
+      }
+    },
+    {
+      "name": "cuda-release",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "PROWL_ENABLE_CUDA": "ON",
+        "PROWL_CUDA_ARCHITECTURES": "120",
+        "PROWL_NATIVE_ARCH": "ON"
+      }
+    },
+    {
+      "name": "cpu-asan",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "PROWL_ENABLE_CUDA": "OFF",
+        "PROWL_BUILD_PYTHON": "OFF",
+        "CMAKE_CXX_FLAGS": "-fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=undefined",
+        "CMAKE_EXE_LINKER_FLAGS": "-fsanitize=address,undefined"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "cpu-debug",
+      "configurePreset": "cpu-debug",
+      "jobs": 16
+    },
+    {
+      "name": "cpu-release",
+      "configurePreset": "cpu-release",
+      "jobs": 16
+    },
+    {
+      "name": "cuda-release",
+      "configurePreset": "cuda-release",
+      "jobs": 16
+    },
+    {
+      "name": "cpu-asan",
+      "configurePreset": "cpu-asan",
+      "jobs": 16
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "cpu-debug",
+      "configurePreset": "cpu-debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "cpu-release",
+      "configurePreset": "cpu-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "cuda-release",
+      "configurePreset": "cuda-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "cpu-asan",
+      "configurePreset": "cpu-asan",
+      "output": {
+        "outputOnFailure": true
+      },
+      "environment": {
+        "ASAN_OPTIONS": "detect_leaks=0",
+        "OMP_NUM_THREADS": "4"
+      }
+    }
+  ]
+}

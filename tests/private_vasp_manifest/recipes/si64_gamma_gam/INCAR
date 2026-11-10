@@ -1,0 +1,13 @@
+SYSTEM = Si64 Gamma-only supercell (benchmark)
+PREC = Normal
+ENCUT = 250
+LREAL = .FALSE.
+ALGO = Fast
+EDIFF = 1E-6
+ISMEAR = 0 ; SIGMA = 0.05
+NBANDS = 408
+ISYM = 0
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.
+NCORE = 4

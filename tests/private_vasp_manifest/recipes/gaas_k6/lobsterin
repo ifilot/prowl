@@ -1,0 +1,7 @@
+COHPstartEnergy  -25
+COHPendEnergy     15
+basisSet Koga
+basisfunctions Ga 4s 4p 3d
+basisfunctions As 4s 4p
+gaussianSmearingWidth 0.05
+cohpbetween atom 1 and atom 2

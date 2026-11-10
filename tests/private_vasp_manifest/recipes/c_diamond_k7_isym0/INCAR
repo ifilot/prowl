@@ -1,0 +1,13 @@
+SYSTEM = C diamond, time-reversal half mesh (ISYM=0) for COHP
+PREC = Accurate
+ENCUT = 500
+LREAL = .FALSE.
+EDIFF = 1E-8
+ISMEAR = -5
+NBANDS = 16
+ISYM = 0
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.
+LORBIT = 11
+NEDOS = 2001

@@ -1,0 +1,12 @@
+SYSTEM = FeS2 pyrite, full 4x4x4 mesh (transition-metal compound fixture)
+PREC = Accurate
+ENCUT = 400
+LREAL = .FALSE.
+EDIFF = 1E-7
+ISMEAR = 0 ; SIGMA = 0.05
+NBANDS = 96
+ISYM = -1
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.
+NCORE = 4

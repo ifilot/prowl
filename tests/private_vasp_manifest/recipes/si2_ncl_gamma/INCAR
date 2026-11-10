@@ -1,0 +1,11 @@
+SYSTEM = Si2 spinor WAVECAR (rejection fixture)
+PREC = Normal
+ENCUT = 250
+LSORBIT = .TRUE.
+ISYM = -1
+ISMEAR = 0 ; SIGMA = 0.05
+NBANDS = 16
+NELM = 15
+EDIFF = 1E-5
+LWAVE = .TRUE.
+LCHARG = .FALSE.

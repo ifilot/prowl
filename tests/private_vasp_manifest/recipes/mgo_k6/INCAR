@@ -1,0 +1,11 @@
+SYSTEM = MgO rocksalt, full 6x6x6 mesh (ionic solid fixture)
+PREC = Accurate
+ENCUT = 500
+LREAL = .FALSE.
+EDIFF = 1E-8
+ISMEAR = 0 ; SIGMA = 0.05
+NBANDS = 16
+ISYM = -1
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.

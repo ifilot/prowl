@@ -1,0 +1,12 @@
+SYSTEM = Si2, low ENCUT and many bands -> k-point header spans records (RTAG 53300)
+PREC = Normal
+ENCUT = 120
+LREAL = .FALSE.
+ALGO = Exact
+NELM = 40
+EDIFF = 1E-6
+ISMEAR = 0 ; SIGMA = 0.05
+NBANDS = 80
+ISYM = -1
+LWAVE = .TRUE.
+LCHARG = .FALSE.

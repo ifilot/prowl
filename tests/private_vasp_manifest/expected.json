@@ -1,0 +1,21 @@
+{
+  "_comment": "Reference values for the private fixtures generated from the recipes in this directory with VASP 6.5.1 (GNU build) and PBE PAW datasets (TITEL recorded per run in manifest.json). LOBSTER values were produced locally with LOBSTER 6.0.0 (basisSet Koga, default settings) and are used only as external comparison numbers.",
+  "tolerances": {"icohp_ev": 2e-4, "icoop": 2e-5, "charge": 2e-3, "spilling_pct": 0.01, "paw_norm": 1e-5},
+  "c_diamond_k7": {
+    "bond": [1, 2, [0, 0, 0]],
+    "paw_onsite": {"icohp": -9.62564, "icoop": 0.40918, "spilling_pct": 0.979},
+    "paw_full": {"icohp": -9.66655, "icoop": 0.40511, "spilling_pct": 0.538},
+    "lobster": {"icohp": -9.62564, "icoop": 0.40918, "spilling_pct": 0.98}
+  },
+  "gaas_k6": {
+    "bond": [1, 2, [0, 0, 0]],
+    "paw_onsite": {"icohp": -4.55365, "icoop": 0.32837, "spilling_pct": 0.994, "mulliken": [0.1527, -0.1527], "lowdin": [-0.0588, 0.0588]},
+    "paw_full": {"icohp": -4.38603, "icoop": 0.29385, "spilling_pct": 0.405},
+    "lobster": {"icohp": -4.55365, "icoop": 0.32837, "spilling_pct": 0.99, "mulliken": [0.15, -0.15], "lowdin": [-0.06, 0.06]}
+  },
+  "si_diamond_k6": {
+    "bond": [1, 2, [0, 0, 0]],
+    "note": "LOBSTER's lowest-NBASIS window is singular at 12/216 k-points (LOBSTER warns and continues); PROWL auto-selects the frozen window, so no LOBSTER equality is expected.",
+    "lobster": {"icohp": -4.57735, "spilling_pct": 1.45}
+  }
+}

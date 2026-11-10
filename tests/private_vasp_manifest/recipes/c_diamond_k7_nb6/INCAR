@@ -1,0 +1,13 @@
+SYSTEM = C diamond, full 7x7x7 mesh for COHP, NBANDS 6 < N_orb (too-few-bands check)
+PREC = Accurate
+ENCUT = 500
+LREAL = .FALSE.
+EDIFF = 1E-8
+ISMEAR = -5
+NBANDS = 6
+ISYM = -1
+NSW = 0
+LWAVE = .TRUE.
+LCHARG = .FALSE.
+LORBIT = 11
+NEDOS = 2001

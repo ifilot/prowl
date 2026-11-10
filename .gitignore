@@ -1,0 +1,43 @@
+# Build trees
+/build/
+/_skbuild/
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Never commit licensed or private calculation data
+POTCAR*
+WAVECAR*
+WAVEDER*
+CHGCAR*
+CHG
+vasprun.xml
+OUTCAR*
+PROCAR*
+LOCPROJ*
+vaspwave.h5
+# LOBSTER outputs (reference comparisons stay private)
+COHPCAR.lobster
+COOPCAR.lobster
+ICOHPLIST.lobster
+ICOOPLIST.lobster
+DOSCAR.lobster
+lobsterout
+CHARGE.lobster
+*.lobster
+# Private run directories
+/runs/
+/private/
+*.h5
+!tests/synthetic/**/*.h5
+python/prowl/*.so
+# Source files whose names resemble VASP files (case-insensitive filesystems)
+!src/**/*.cpp
+!src/**/*.cu
+!include/**/*.hpp
+!tests/unit/*.cpp
+!tests/unit/*.hpp
+!python/**/*.py
