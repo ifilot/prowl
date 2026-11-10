@@ -36,10 +36,14 @@ CHARGE.lobster
 *.h5
 !tests/synthetic/**/*.h5
 python/prowl/*.so
-# Source files whose names resemble VASP files (case-insensitive filesystems)
+# Source files whose names resemble VASP files (case-insensitive filesystems:
+# with core.ignorecase, POTCAR*/WAVECAR* also match potcar.hpp and wavecar.hpp)
 !src/**/*.cpp
 !src/**/*.cu
+!src/**/*.hpp
 !include/**/*.hpp
+# Recipe POTCAR symbol lists (e.g. "Ti O"), not licensed potential data
+!tests/private_vasp_manifest/recipes/*/potcar.txt
 !tests/unit/*.cpp
 !tests/unit/*.hpp
 !python/**/*.py

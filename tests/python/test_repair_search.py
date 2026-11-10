@@ -75,11 +75,16 @@ def test_fast_search_matches_linear_scan(case, device):
 
 def test_cases_exercise_repairs():
     """The synthetic set contains an unrepaired window, short and long repairs, and failures."""
+    from threadpoolctl import threadpool_limits
+
     seen = set()
-    for case in CASES:
-        T, S, eps, occ, norb = _problem(**case)
-        r = _core.repaired_windows([[T]], [S], [[eps]], [[occ]], norb, T.shape[1] - 10, 1e-4, 1e-3,
-                                   diagnostics=True)[0]
-        nc, failed, steps = r[4], r[5], r[6]
-        seen.add("failed" if failed else ("long repair" if steps >= 16 else "repaired") if nc else "norb")
+    # The parallel scan evaluates candidate steps speculatively, so steps_scanned depends on the thread count and
+    # timing (the result does not). Count steps on one thread, where it is the deterministic scan length.
+    with threadpool_limits(limits=1, user_api="openmp"):
+        for case in CASES:
+            T, S, eps, occ, norb = _problem(**case)
+            r = _core.repaired_windows([[T]], [S], [[eps]], [[occ]], norb, T.shape[1] - 10, 1e-4, 1e-3,
+                                       diagnostics=True)[0]
+            nc, failed, steps = r[4], r[5], r[6]
+            seen.add("failed" if failed else ("long repair" if steps >= 16 else "repaired") if nc else "norb")
     assert seen == {"norb", "repaired", "long repair", "failed"}
